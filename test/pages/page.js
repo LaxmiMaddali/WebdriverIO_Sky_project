@@ -13,9 +13,7 @@ module.exports = class Page {
 
    acceptCookie(){
      let frame= browser.$('#sp_message_iframe_207015');      
-     browser.pause(5000);
-     browser.switchToFrame(frame);
-     browser.setTimeout({ 'implicit': 10000 })     
+     browser.switchToFrame(frame); 
      let clickAgree =   $('button[title="Agree"]');   
      clickAgree.click();
      browser.switchToParentFrame();
