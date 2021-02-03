@@ -12,10 +12,15 @@ module.exports = class Page {
    }
 
    acceptCookie(){
-     let frame= browser.$('#sp_message_iframe_207015');      
+     let frame= browser.$('#sp_message_iframe_207015');  
+     waitForElement(frame);
      browser.switchToFrame(frame); 
      let clickAgree =   $('button[title="Agree"]');   
      clickAgree.click();
      browser.switchToParentFrame();
+   }
+
+   waitForElement(element){
+    browser.waitUntil(() => element.isFocused(), 8000, "Expected frame is not displayed");   
    }
 }
