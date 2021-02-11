@@ -8,8 +8,9 @@ describe('validating prices on deals page', () => {
     })
 
     it('Clicking and validating deals page', () => {
-        waitForElement(DealsPage.deals);
+        browser.setTimeout({ 'implicit': 10000 })
         DealsPage.deals.click()
+        browser.setTimeout({ 'implicit': 10000 })
         expect(browser).toHaveUrl('https://www.sky.com/shop/offers')
     })
 
