@@ -8,7 +8,7 @@ describe('Sign In Validation', () => {
     })
 
     it('Clicking on signin link on homepaege', () => {
-        browser.setTimeout({ 'implicit': 10000 })
+        SigninPage.signInLink.waitForDisplayed({ timeout: 10000 })
         SigninPage.signInLink.click()
         SigninPage.signInPageTitle.waitForDisplayed({timeout : 3000})
         expect(browser).toHaveTitle('Sky - Sign in')
@@ -29,7 +29,7 @@ describe('Sign In Validation', () => {
 
     it('validating the error message',()=>{
         const errorMessage = $('#signInPanel ul > li')
-        browser.setTimeout({ 'implicit': 10000 })
+        browser.setTimeout({ 'pageLoad': 10000 })
         expect(errorMessage.getText()).toHaveTextContaining('Sorry, we did not recognise either your username or password')
     })
 })
