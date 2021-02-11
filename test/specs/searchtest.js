@@ -13,11 +13,9 @@ it('click on search button on homepage',()=>{
 
 it('enter value into the search field', ()=>{
        SearchPage.enterValueInSearchField.addValue('Sky');
-       SearchPage.clickOnSearchIcon.click();
-       
 })
+
  it('Validating the editorial section on Sky page',()=>{
-     waitForElement(SearchPage.editorialSection)
      expect(SearchPage.editorialSection).toBeVisible();
  })
 
