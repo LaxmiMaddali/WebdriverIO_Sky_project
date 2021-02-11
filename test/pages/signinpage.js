@@ -33,6 +33,10 @@ class SigninPage extends Page {
   acceptCookie(){
       super.acceptCookie();
   }
+    
+   waitForElement(element){
+        super.waitForElement(element)
+    }
 
 }
 
