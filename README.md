@@ -1,18 +1,18 @@
+
 Prerequisites:(if mac use Homebrew to install)
 
     1. Download Nodejs
-    2. npm
-    3. @wdio/cli
-    
- To run the project :
+    2. downlod npm
+    3. download @wdio/cli
+
+
+
+To execute the entire test suite in local development please use the following:
+
+    Step 1: Install all the dependencies using npm i
+ 
+ 
+To run the project :
  
     Command : npx wdio wdio.conf.js
-
-If the above doesnt run the project , please follow the steps below:
-
-You should delete this package-lock.json. sudo rm -rf package-lock.json
-Cant see package-lock.json? Try this sudo ls -la.
-Next steps;
-1-npm update
-2-npm install
-3-npx wdio wdio.conf.js
+     This executes all spec files in the './test/specs/*.js'  directory.
