@@ -28,9 +28,9 @@ describe('Sign In Validation', () => {
     })
 
     it('validating the error message',()=>{
-        const errorMessage = $('#signInPanel ul > li')
+         const errorMessage = $('div[class="globalErrors"] ul li')
         browser.setTimeout({ 'pageLoad': 10000 })
-        expect(errorMessage.getText()).toHaveTextContaining('Sorry, we did not recognise either your username or password')
+        expect(errorMessage).toBeDisplayed;
     })
 })
 
